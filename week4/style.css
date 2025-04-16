@@ -1,0 +1,189 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e201d;
+    color: rgb(194, 194, 194);
+    box-sizing: border-box;
+    object-fit: cover;
+}
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0em 2em;
+    box-sizing: border-box;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    gap: 5em;
+    padding: 1em 3em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8em;
+    padding: 1em 4em;
+    line-height: 2em;
+}
+.main h2{
+    font-style: italic;
+}
+.main-image{
+    width: 30em;
+    height: 30em;
+    max-width: 100%;
+    object-fit: cover;
+    border: none;
+    box-shadow: none;
+}
+.products-tittle{
+    text-align: center;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+}
+.product-card {
+    padding: 1em;
+    text-align: center;
+    border-radius: 1em;
+   
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    object-fit: cover;
+    display: block;
+}
+footer {
+    background-color: rgb(16, 1, 1);
+    padding: 2em;
+    text-align: center;
+}
+
+.socials a {
+    margin: 0 1em;
+    color: #ee66d7;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #c13584; /* You can change this for each brand if you want */
+}
+button{
+    background-color: #5f1c5f;
+    border: none;
+    color: white;
+    padding:0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0.2em 0.5em;
+    cursor: pointer;
+    border-radius: 3em;
+}
+button:hover{
+    background-color: #d387d3; /* Darker green */
+}
+button:focus{
+    outline: none;
+}
+/* Responsive Design */
+/* Media query for small screens */
+@media (max-width: 480px) {
+
+    header{
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    }
+    ul{
+        flex-direction: row;
+        flex-wrap: wrap; /* Wrap items if space runs out */
+        justify-content: center;
+        gap: 1em; /* Reduce spacing for small screens */
+        padding: 0.5em;
+        font-size: 1em;
+    }
+    .main > div:last-child {
+        display: none; /* hides the image container */
+      }
+    .main {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0em;
+    }
+    .main-image {
+        display: none;
+    }
+    .products-tittle {
+        margin-top: 0em; /* reduce space between sections */
+    }
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Media query for medium screens */
+@media (max-width: 1024px) and (min-width: 481px){
+    .main {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 2em;
+    }
+    .main-image {
+        width: 100%;
+        height: auto;
+    }
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .product-card {
+        padding: 1em;
+        text-align: center;
+        border-radius: 1em;
+    }
+}
+/* Media query for larger screens */
+@media(min-width:1025px){
+    .main {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 8em;
+        padding: 1em 4em;
+    }
+    .main-image {
+        width: 30em;
+        height: 30em;
+    }
+    .product-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .product-card {
+        padding: 1em;
+        text-align: center;
+        border-radius: 1em;
+    }
+}
